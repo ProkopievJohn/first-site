@@ -1,0 +1,43 @@
+header
+	position absolute
+	top 0
+	left 0
+	width 100%
+	z-index 100
+.header
+	height 120px
+	&:after {
+		content ''
+		display table
+		clear both
+	}	
+.logo
+	float left
+	img
+		width 100px
+		clear both
+		margin 20px
+nav
+	float right
+	padding-right 30px
+	.active
+		color: #e6e6e6
+	li
+		list-style: none;
+		display inline-block
+	a
+		font-size: 1.2rem
+		text-transform uppercase
+		margin 50px 10px
+		&::after
+			position: relative;
+			top: 0;
+			left: 50%;
+			width: 0%;
+			content: '';
+			display: block;
+			border-bottom: 1px solid #e6e6e6;
+		&:hover
+			&::after
+				left: 0;
+				width: 100%;

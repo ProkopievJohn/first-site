@@ -1,0 +1,54 @@
+
+#page-preloader {
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height 100%
+	background-color: #000
+	z-index 100500
+}
+
+.preloader
+	width 5%
+	z-index 100500
+	position absolute
+	top 50%
+	left 50%
+	transform translate(-50%,-50%)
+
+.preload
+	fill #cdcdcd
+	
+.j, .o, .h, .n
+	animation: 2s infinite ease-in-out;
+
+.j
+	animation-name j
+.o
+	animation-name o
+.h
+	animation-name h
+.n
+	animation-name n
+
+@keyframes j
+	0%, 75%, 100%
+		fill: #48494a;
+	25%, 62.5%
+		fill: #cdcdcd;
+@keyframes o
+	0%, 25%, 100%
+		fill: #48494a;
+	50%, 87.5%
+		fill: #cdcdcd;
+@keyframes h
+	25%, 50%
+		fill: #48494a;
+	0%, 12.5%, 75%, 100%
+		fill: #cdcdcd;
+@keyframes n
+	0%, 37.5%, 100%
+		fill: #cdcdcd;
+	50%, 75%
+		fill: #48494a;
