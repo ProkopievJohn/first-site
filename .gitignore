@@ -1,5 +1,9 @@
-app/index.html
 /app/img
-/app/js
+app/news.html
+app/about.html
+app/contact.html
+/app/includes
 /node_modules
+app/index.html
 /app/css
+/app/js

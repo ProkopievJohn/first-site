@@ -40,7 +40,7 @@ gulp.task('bower', function () {
 
 // JADE
 gulp.task('jade', function () {
-  gulp.src('app/jade/index.jade')
+  gulp.src(['app/jade/*.jade', 'app/jade/*/*.jade'])
     .pipe(jade())
     .pipe(prettify({indent_char: ' ', indent_size: 1}))
     .pipe(gulp.dest('app'))
@@ -64,10 +64,9 @@ gulp.task('styl', function() {
 
 // JAVASCRIPT
 gulp.task('js', function () {
-  gulp.src('app/myjs/*.js')
-  // gulp.src('app/myjs/Slider.js')
+  gulp.src(['app/myjs/*/*.js', 'app/myjs/*.js'])
     .pipe(concat('all.min.js'))
-    .pipe(jshint())
+    // .pipe(jshint())
     // .pipe(complexity())
     // .pipe(autopolyfiller('result_polyfill_file.js', {
     //     browsers: ['last 4 version', '> 1%', 'ie 9']
@@ -100,7 +99,7 @@ gulp.task('build', function () {
 
 gulp.task('watch', function () {
   gulp.watch('app/*.jade',['jade']);
-  gulp.watch('app/myjs/*.js',['js']);
+  gulp.watch(['app/myjs/*/*.js', 'app/myjs/*.js'],['js']);
   gulp.watch('app/styl/*.styl',['styl']);
 });
 
